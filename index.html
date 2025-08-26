@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAMBO EXCHANGE - 2nd Centralized DEX on NEAR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+
+      body {
+        font-family: "Courier Prime", monospace;
+        background: repeating-linear-gradient(
+          45deg,
+          #00ff00,
+          #00ff00 2px,
+          #ffffff 2px,
+          #ffffff 4px
+        );
+        animation: tileSlide 20s linear infinite;
+      }
+
+      @keyframes tileSlide {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 20px 20px;
+        }
+      }
+
+      .container-90s {
+        max-width: 960px;
+        background: #c0c0c0;
+        border: 4px outset #c0c0c0;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .button-90s {
+        background: #c0c0c0;
+        border: 2px outset #c0c0c0;
+        padding: 8px 16px;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: "Courier Prime", monospace;
+      }
+
+      .button-90s:hover {
+        border: 2px inset #c0c0c0;
+      }
+
+      .section-90s {
+        border: 2px inset #c0c0c0;
+        background: #f0f0f0;
+        padding: 16px;
+        margin: 8px 0;
+      }
+
+      .blink {
+        animation: blink 1s steps(2, start) infinite;
+      }
+
+      @keyframes blink {
+        to {
+          visibility: hidden;
+        }
+      }
+
+      .hit-counter {
+        background: #000;
+        color: #00ff00;
+        padding: 4px 8px;
+        font-family: "Courier Prime", monospace;
+        border: 1px solid #333;
+      }
+
+      marquee {
+        background: #ff00ff;
+        color: #ffff00;
+        font-weight: bold;
+        padding: 8px;
+        border: 2px solid #000;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-4">
+    <div class="container-90s mx-auto">
+      <!-- Header -->
+      <div
+        class="bg-blue-600 text-white p-4 text-center border-b-4 border-black"
+      >
+        <div class="flex items-center justify-center gap-4 mb-2">
+          <img src="./assets/jambo.webp" alt="Jambo Logo" class="w-16 h-16" />
+          <div>
+            <h1 class="text-4xl font-bold">JAMBO EXCHANGE</h1>
+            <p class="text-lg">2nd Centralized DEX on NEAR</p>
+          </div>
+        </div>
+        <p class="text-xl font-bold text-yellow-300">
+          WE TAKE CARE OF YOUR ASSETS THE TRADFI WAY
+        </p>
+      </div>
+
+      <!-- Under Construction Banner -->
+      <div
+        class="bg-yellow-400 text-black text-center py-2 border-b-2 border-black"
+      >
+        <span class="blink">🚧</span> UNDER CONSTRUCTION
+        <span class="blink">🚧</span>
+        <br />
+        <small>Best viewed in Netscape 3.0 / 800×600</small>
+      </div>
+
+      <!-- Marquee -->
+      <marquee behavior="scroll" direction="left" scrollamount="3">
+        JAMBO JAMBO JAMBO JAMBO JAMBO JAMBO JAMBO JAMBO JAMBO
+      </marquee>
+
+      <!-- Hero Section -->
+      <div class="section-90s text-center">
+        <h2 class="text-3xl font-bold mb-4 text-red-600">
+          WELCOME TO THE FUTURE OF FINANCE
+        </h2>
+        <p class="text-lg mb-4">
+          <b>Full-access key security™</b> meets
+          <b>Migrations are proof-of-care</b>
+        </p>
+        <p class="text-base">
+          The <b class="text-blue-600">2ND CENTRALIZED DEX ON NEAR</b> that
+          proudly does things the TradFi/manual way.
+        </p>
+        <br />
+        <button class="button-90s text-lg">ENTER EXCHANGE</button>
+      </div>
+
+      <!-- How It Works -->
+      <div class="section-90s">
+        <h3 class="text-2xl font-bold text-center mb-4 text-purple-600">
+          HOW IT WORKS
+        </h3>
+        <div class="space-y-3">
+          <div class="border-l-4 border-blue-500 pl-4">
+            <b>1) CUSTODY FIRST</b> — Deposits are lovingly consolidated into
+            <b>Treasury Wallet</b> (single-signer "multisig").
+          </div>
+          <div class="border-l-4 border-green-500 pl-4">
+            <b>2) SWAP TICKETS</b> — You submit a request;
+            <b>settlement in 1–3 business days</b>. "Slippage" is acknowledged
+            as a vibe.
+          </div>
+          <div class="border-l-4 border-yellow-500 pl-4">
+            <b>3) YIELD COUPONS</b> — Rewards appear during upgrades as
+            <b>$OLDJAMBO</b> (funny, collectible, not serious).
+          </div>
+          <div class="border-l-4 border-red-500 pl-4">
+            <b>4) QUARTERLY MIGRATIONS</b> — Funds "move" to fresh addresses for
+            your "safety." New badge, same energy.
+          </div>
+          <div class="border-l-4 border-purple-500 pl-4">
+            <b>5) CLAIMS BY DM</b> — Customer service = you message us; we click
+            manually. "Decentralized help desk."
+          </div>
+        </div>
+      </div>
+
+      <!-- Tokenomics -->
+      <div class="section-90s">
+        <h3 class="text-2xl font-bold text-center mb-4 text-green-600">
+          $JAMBO TOKENOMICS
+        </h3>
+        <div class="text-center mb-4">
+          <p class="text-lg font-bold">
+            🎉 ACTUALLY LAUNCHED ON
+            <a href="#" class="text-blue-600 underline">MEME.COOKING</a> 🎉
+          </p>
+          <p class="text-base">Supply: <b>1,000,000,000 JAMBO</b></p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-blue-100 p-4 border-2 border-blue-500 text-center">
+            <b class="text-xl">50%</b><br />
+            Liquidity<br />
+            <small>(Treasury Wallet)</small>
+          </div>
+          <div class="bg-yellow-100 p-4 border-2 border-yellow-500 text-center">
+            <b class="text-xl">30%</b><br />
+            Team<br />
+            <small>(also Treasury Wallet)</small>
+          </div>
+          <div class="bg-green-100 p-4 border-2 border-green-500 text-center">
+            <b class="text-xl">20%</b><br />
+            <b class="text-red-600">AIRDROP</b><br />
+            <small>You get a JAMBO!<br />Everyone gets a JAMBO!</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disclaimers -->
+      <div class="section-90s bg-red-100 border-red-500">
+        <h3 class="text-xl font-bold text-center mb-4 text-red-600">
+          ⚠️ IMPORTANT DISCLAIMERS ⚠️
+        </h3>
+        <div class="text-center space-y-2">
+          <p>
+            <b
+              >THIS IS A PARODY. DO NOT DEPOSIT FUNDS ANYWHERE BECAUSE THERE IS
+              NOWHERE TO DEPOSIT.</b
+            >
+          </p>
+          <p>
+            This is a parody token; nothing here is financial advice.
+            <b>Laugh, don't leverage.</b>
+          </p>
+          <p><small>Verified by Absolutely No One™</small></p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="bg-gray-300 p-4 border-t-4 border-black">
+        <div class="flex flex-wrap justify-between items-center text-sm">
+          <div class="flex items-center gap-4">
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              alt="Netscape Now!"
+              class="w-16 h-8 bg-blue-600"
+            />
+            <img
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              alt="IE Compatible"
+              class="w-16 h-8 bg-green-600"
+            />
+            <span class="text-xs">Now on NEAR</span>
+          </div>
+          <div class="text-center">
+            <div class="hit-counter">Visitor Count: 000042069</div>
+            <p class="text-xs mt-1">Last updated: December 2024</p>
+          </div>
+          <div class="text-right text-xs">
+            <a href="#" class="text-blue-600 underline">Sign Guestbook</a><br />
+            <a href="#" class="text-blue-600 underline">View Source</a><br />
+            <a href="#" class="text-blue-600 underline">Email Webmaster</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Add some 90s JavaScript flavor
+      console.log("Welcome to JAMBO EXCHANGE - Now loading...");
+
+      // Fake loading effect
+      setTimeout(() => {
+        console.log("Loading complete! Enjoy your stay in 1998!");
+      }, 2000);
+
+      // Click counter for the button
+      let clickCount = 0;
+      document
+        .querySelector(".button-90s")
+        .addEventListener("click", function () {
+          clickCount++;
+          alert(`You have clicked ${clickCount} times! Very Web 1.0 of you.`);
+        });
+    </script>
+  </body>
+</html>
