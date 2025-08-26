@@ -4,29 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JAMBO EXCHANGE - 2nd Centralized DEX on NEAR</title>
+    <link rel="icon" type="image/webp" href="./assets/favicon.webp" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
 
       body {
         font-family: "Courier Prime", monospace;
-        background: repeating-linear-gradient(
-          45deg,
-          #00ff00,
-          #00ff00 2px,
-          #ffffff 2px,
-          #ffffff 4px
-        );
-        animation: tileSlide 20s linear infinite;
-      }
-
-      @keyframes tileSlide {
-        0% {
-          background-position: 0 0;
-        }
-        100% {
-          background-position: 20px 20px;
-        }
+        background: #f5f5f5;
       }
 
       .container-90s {
@@ -57,13 +42,27 @@
       }
 
       .blink {
-        animation: blink 1s steps(2, start) infinite;
+        animation: blink 3s steps(2, start) infinite;
       }
 
       @keyframes blink {
         to {
           visibility: hidden;
         }
+      }
+
+      .subtle-highlight {
+        background-color: #ffff99;
+        padding: 2px 4px;
+      }
+
+      .important-text {
+        color: #ff0000;
+        font-weight: bold;
+      }
+
+      .table-border {
+        border: 2px solid #666;
       }
 
       .hit-counter {
@@ -101,14 +100,18 @@
         </p>
       </div>
 
-      <!-- Under Construction Banner -->
+      <!-- Launch Banner -->
       <div
-        class="bg-yellow-400 text-black text-center py-2 border-b-2 border-black"
+        class="bg-yellow-400 text-black text-center py-2 border-b-2 border-black flash"
       >
-        <span class="blink">🚧</span> UNDER CONSTRUCTION
-        <span class="blink">🚧</span>
+        <span class="blink">🎉</span> NOW LIVE <span class="blink">🎉</span>
+        <span class="shake">⚡ TRADING ENABLED ⚡</span>
+        <span class="blink">🎉</span>
         <br />
-        <small>Best viewed in Netscape 3.0 / 800×600</small>
+        <small
+          >Optimized for modern browsers | <span class="flash">NEW!</span> Full
+          HD experience!</small
+        >
       </div>
 
       <!-- Marquee -->
@@ -117,79 +120,216 @@
       </marquee>
 
       <!-- Hero Section -->
-      <div class="section-90s text-center">
-        <h2 class="text-3xl font-bold mb-4 text-red-600">
-          WELCOME TO THE FUTURE OF FINANCE
+      <div class="section-90s text-center pulse-border">
+        <h2 class="text-3xl font-bold mb-4 rainbow-text">
+          🎉 WELCOME TO THE FUTURE OF FINANCE 🎉
         </h2>
+        <div class="flash p-2 mb-2">
+          <span class="blink">⭐ FEATURED ON CRYPTO NEWS ⭐</span>
+        </div>
         <p class="text-lg mb-4">
-          <b>Full-access key security™</b> meets
-          <b>Migrations are proof-of-care</b>
+          <b class="shake">Full-access key security™</b> meets
+          <b class="flash">Migrations are proof-of-care</b>
         </p>
-        <p class="text-base">
-          The <b class="text-blue-600">2ND CENTRALIZED DEX ON NEAR</b> that
+        <p class="text-base mb-2">
+          The
+          <b class="text-blue-600 blink">2ND CENTRALIZED DEX ON NEAR</b> that
           proudly does things the TradFi/manual way.
         </p>
+        <div class="bg-red-600 text-white p-2 mb-4 blink">
+          <b>🔥 HOT! 🔥 AS SEEN ON TV! 🔥 LIMITED TIME OFFER! 🔥</b>
+        </div>
         <br />
-        <button class="button-90s text-lg">ENTER EXCHANGE</button>
+        <button class="button-90s text-lg shake">ENTER EXCHANGE</button>
+        <button class="button-90s text-lg ml-2 flash">SIGN UP NOW!</button>
+        <br /><br />
+        <div class="text-xs">
+          <span class="blink">⚡ POWERED BY JAVASCRIPT ⚡</span> |
+          <span class="flash">📧 EMAIL ALERTS AVAILABLE 📧</span> |
+          <span class="shake">🔔 PUSH NOTIFICATIONS! 🔔</span>
+        </div>
       </div>
 
       <!-- How It Works -->
       <div class="section-90s">
-        <h3 class="text-2xl font-bold text-center mb-4 text-purple-600">
-          HOW IT WORKS
+        <h3 class="text-2xl font-bold text-center mb-4 rainbow-text">
+          🚀 HOW IT WORKS 🚀
         </h3>
+        <div class="flash p-2 mb-4 text-center">
+          <span class="blink">💯 REVOLUTIONARY TECHNOLOGY 💯</span>
+        </div>
         <div class="space-y-3">
-          <div class="border-l-4 border-blue-500 pl-4">
-            <b>1) CUSTODY FIRST</b> — Deposits are lovingly consolidated into
-            <b>Treasury Wallet</b> (single-signer "multisig").
+          <div class="border-l-4 border-blue-500 pl-4 shake">
+            <b class="flash">1) CUSTODY FIRST</b> — Deposits are lovingly
+            consolidated into
+            <b class="blink">Treasury Wallet</b> (single-signer "multisig").
+            <span class="text-xs flash">📈 99.9% UPTIME! 📈</span>
           </div>
           <div class="border-l-4 border-green-500 pl-4">
-            <b>2) SWAP TICKETS</b> — You submit a request;
-            <b>settlement in 1–3 business days</b>. "Slippage" is acknowledged
-            as a vibe.
+            <b class="rainbow-text">2) SWAP TICKETS</b> — You submit a request;
+            <b class="shake">settlement in 1–3 business days</b>. "Slippage" is
+            acknowledged as a vibe.
+            <span class="blink">⏰ FASTER THAN BANKS! ⏰</span>
           </div>
-          <div class="border-l-4 border-yellow-500 pl-4">
-            <b>3) YIELD COUPONS</b> — Rewards appear during upgrades as
-            <b>$OLDJAMBO</b> (funny, collectible, not serious).
+          <div class="border-l-4 border-yellow-500 pl-4 pulse-border">
+            <b class="flash">3) YIELD COUPONS</b> — Rewards appear during
+            upgrades as <b class="blink">$OLDJAMBO</b> (funny, collectible, not
+            serious).
+            <span class="shake">🎁 FREE MONEY! 🎁</span>
           </div>
           <div class="border-l-4 border-red-500 pl-4">
-            <b>4) QUARTERLY MIGRATIONS</b> — Funds "move" to fresh addresses for
-            your "safety." New badge, same energy.
+            <b class="shake">4) QUARTERLY MIGRATIONS</b> — Funds "move" to fresh
+            addresses for your "safety." New badge, same energy.
+            <span class="flash">🔒 MILITARY GRADE! 🔒</span>
           </div>
-          <div class="border-l-4 border-purple-500 pl-4">
-            <b>5) CLAIMS BY DM</b> — Customer service = you message us; we click
-            manually. "Decentralized help desk."
+          <div class="border-l-4 border-purple-500 pl-4 flash">
+            <b class="rainbow-text">5) CLAIMS BY DM</b> — Customer service = you
+            message us; we click manually. "Decentralized help desk."
+            <span class="blink">👥 24/7 SUPPORT! 👥</span>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <div class="bg-yellow-300 p-2 border-2 border-black shake">
+            <span class="blink">🔥 PATENT PENDING TECHNOLOGY! 🔥</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Ticker -->
+      <div class="bg-black text-green-400 p-2 font-mono text-xs">
+        <marquee behavior="scroll" direction="left" scrollamount="2">
+          📰 BREAKING: Jambo Exchange voted "Most Innovative" by Crypto Weekly
+          📰 | 🚨 ALERT: New users get 50% bonus tokens! 🚨 | 💰 WHALE SPOTTED:
+          Someone just deposited 1M JAMBO! 💰 | ⚡ SYSTEM UPDATE: Migration 2.0
+          coming soon! ⚡ | 🎯 PARTNERSHIP: Talks with major exchange underway!
+          🎯
+        </marquee>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="section-90s pulse-border">
+        <h3 class="text-2xl font-bold text-center mb-4 flash">
+          💬 WHAT OUR USERS SAY 💬
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-yellow-100 p-4 border-2 border-yellow-500">
+            <p class="text-sm">
+              <i
+                >"Finally, a DEX that makes sense! No more confusing DeFi
+                nonsense."</i
+              >
+            </p>
+            <p class="text-xs mt-2">
+              <b class="blink">- Chad BigWallet, Professional Trader</b>
+            </p>
+            <div class="text-xs flash">⭐⭐⭐⭐⭐ 5/5 STARS!</div>
+          </div>
+          <div class="bg-blue-100 p-4 border-2 border-blue-500 shake">
+            <p class="text-sm">
+              <i>"I love that someone else manages my keys. So convenient!"</i>
+            </p>
+            <p class="text-xs mt-2">
+              <b class="rainbow-text">- Luna Mooner, Crypto Enthusiast</b>
+            </p>
+            <div class="text-xs blink">💎 DIAMOND HANDS APPROVED! 💎</div>
+          </div>
+          <div class="bg-green-100 p-4 border-2 border-green-500 flash">
+            <p class="text-sm">
+              <i
+                >"Migration feature is genius! My funds get fresher every
+                quarter!"</i
+              >
+            </p>
+            <p class="text-xs mt-2">
+              <b class="shake">- Satoshi NakaMoto, Totally Real User</b>
+            </p>
+            <div class="text-xs pulse-border">🚀 TO THE MOON! 🚀</div>
+          </div>
+          <div class="bg-red-100 p-4 border-2 border-red-500">
+            <p class="text-sm">
+              <i>"Best customer service! They actually DM me back!"</i>
+            </p>
+            <p class="text-xs mt-2">
+              <b class="blink">- Vitalik Buttering, Developer</b>
+            </p>
+            <div class="text-xs rainbow-text">🔥 HOT TESTIMONIAL! 🔥</div>
           </div>
         </div>
       </div>
 
       <!-- Tokenomics -->
-      <div class="section-90s">
-        <h3 class="text-2xl font-bold text-center mb-4 text-green-600">
-          $JAMBO TOKENOMICS
+      <div class="section-90s shake">
+        <h3 class="text-2xl font-bold text-center mb-4 rainbow-text">
+          💰 $JAMBO TOKENOMICS 💰
         </h3>
         <div class="text-center mb-4">
           <p class="text-lg font-bold">
-            🎉 ACTUALLY LAUNCHED ON
-            <a href="#" class="text-blue-600 underline">MEME.COOKING</a> 🎉
+            🎉
+            <a
+              href="https://meme.cooking/meme/1677"
+              class="text-blue-600 underline flash"
+              >MEME.COOKING</a
+            >
+            🎉
           </p>
-          <p class="text-base">Supply: <b>1,000,000,000 JAMBO</b></p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-blue-100 p-4 border-2 border-blue-500 text-center">
-            <b class="text-xl">50%</b><br />
-            Liquidity<br />
-            <small>(Treasury Wallet)</small>
+          <p class="text-base">
+            Supply: <b class="shake">1,000,000,000 JAMBO</b>
+          </p>
+          <div class="text-xs mt-2">
+            <span class="blink">📊 MARKET CAP: $420,069 📊</span> |
+            <span class="flash">📈 24H VOLUME: $69,420 📈</span>
           </div>
-          <div class="bg-yellow-100 p-4 border-2 border-yellow-500 text-center">
-            <b class="text-xl">30%</b><br />
-            Team<br />
-            <small>(also Treasury Wallet)</small>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+            class="bg-blue-100 p-4 border-2 border-blue-500 text-center pulse-border"
+          >
+            <b class="text-xl rainbow-text">70%</b><br />
+            <span class="flash">Liquidity</span><br />
+            <small class="blink">(Treasury Wallet)</small>
+            <div class="text-xs mt-1 shake">🏦 BANK GRADE! 🏦</div>
           </div>
           <div class="bg-green-100 p-4 border-2 border-green-500 text-center">
-            <b class="text-xl">20%</b><br />
-            <b class="text-red-600">AIRDROP</b><br />
-            <small>You get a JAMBO!<br />Everyone gets a JAMBO!</small>
+            <b class="text-xl blink">30%</b><br />
+            <b class="text-red-600 flash">AIRDROP</b><br />
+            <small class="shake"
+              >You get a JAMBO!<br />Everyone gets a JAMBO!</small
+            >
+            <div class="text-xs mt-1 rainbow-text">🎁 FREE MONEY! 🎁</div>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <div class="bg-purple-300 p-2 border-2 border-purple-600 blink">
+            <span class="flash">🔮 PRICE PREDICTION: $1 BY 2025! 🔮</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="section-90s">
+        <h3 class="text-2xl font-bold text-center mb-4 flash">
+          ⚡ PREMIUM FEATURES ⚡
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-cyan-100 p-4 border-2 border-cyan-500 shake">
+            <h4 class="font-bold blink">🔐 Cold Storage Plus+</h4>
+            <p class="text-sm">
+              Your funds stored in our personal hardware wallet!
+            </p>
+          </div>
+          <div class="bg-pink-100 p-4 border-2 border-pink-500 flash">
+            <h4 class="font-bold rainbow-text">📱 Mobile App</h4>
+            <p class="text-sm">Coming to iOS and Android soon!</p>
+          </div>
+          <div
+            class="bg-orange-100 p-4 border-2 border-orange-500 pulse-border"
+          >
+            <h4 class="font-bold shake">🤖 AI Trading Bot</h4>
+            <p class="text-sm">Powered by our intern's Excel spreadsheet!</p>
+          </div>
+          <div class="bg-lime-100 p-4 border-2 border-lime-500 blink">
+            <h4 class="font-bold flash">💎 VIP Club</h4>
+            <p class="text-sm">Exclusive access to our Discord channel!</p>
           </div>
         </div>
       </div>
@@ -214,30 +354,101 @@
         </div>
       </div>
 
+      <!-- Awards Section -->
+      <div class="section-90s flash">
+        <h3 class="text-2xl font-bold text-center mb-4 rainbow-text">
+          🏆 AWARDS & RECOGNITION 🏆
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-xs">
+          <div class="blink">🥇 Best New Exchange 2024</div>
+          <div class="shake">🏅 Innovation Award</div>
+          <div class="flash">🎖️ People's Choice</div>
+          <div class="pulse-border">🏆 Crypto Awards Winner</div>
+          <div class="rainbow-text">⭐ 5-Star Rating</div>
+          <div class="blink">💎 Diamond Certified</div>
+          <div class="flash">🚀 Rising Star Award</div>
+          <div class="shake">🔥 Hot 100 Crypto</div>
+        </div>
+      </div>
+
+      <!-- Web Ring -->
+      <div
+        class="bg-purple-200 p-2 text-center text-xs border-2 border-purple-500"
+      >
+        <div class="blink">🔗 JAMBO WEB RING 🔗</div>
+        <div class="mt-1">
+          <a href="#" class="text-blue-600 underline flash">← Previous</a> |
+          <a href="#" class="text-blue-600 underline shake">Random</a> |
+          <a href="#" class="text-blue-600 underline blink">Next →</a>
+        </div>
+      </div>
+
       <!-- Footer -->
       <div class="bg-gray-300 p-4 border-t-4 border-black">
+        <div class="text-center mb-4">
+          <div class="flash p-2 bg-yellow-200 border-2 border-yellow-500 mb-2">
+            <span class="blink">📧 SUBSCRIBE TO OUR NEWSLETTER! 📧</span>
+            <br />
+            <input
+              type="email"
+              placeholder="your@email.com"
+              class="p-1 border-2 border-black text-xs"
+            />
+            <button class="button-90s text-xs ml-1 shake">SUBSCRIBE!</button>
+          </div>
+        </div>
         <div class="flex flex-wrap justify-between items-center text-sm">
           <div class="flex items-center gap-4">
-            <img
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              alt="Netscape Now!"
-              class="w-16 h-8 bg-blue-600"
-            />
-            <img
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              alt="IE Compatible"
-              class="w-16 h-8 bg-green-600"
-            />
-            <span class="text-xs">Now on NEAR</span>
+            <div
+              class="w-16 h-8 bg-blue-600 text-white text-xs flex items-center justify-center blink"
+            >
+              CHROME
+            </div>
+            <div
+              class="w-16 h-8 bg-green-600 text-white text-xs flex items-center justify-center flash"
+            >
+              SAFARI
+            </div>
+            <div
+              class="w-16 h-8 bg-red-600 text-white text-xs flex items-center justify-center shake"
+            >
+              FIREFOX
+            </div>
+            <span class="text-xs rainbow-text">Now on NEAR</span>
           </div>
           <div class="text-center">
-            <div class="hit-counter">Visitor Count: 000042069</div>
-            <p class="text-xs mt-1">Last updated: December 2024</p>
+            <div class="hit-counter blink">
+              Visitor Count: <span id="visitor-count">000042069</span>
+            </div>
+            <p class="text-xs mt-1">
+              Last updated: <span class="flash">December 2024</span>
+            </p>
+            <div class="text-xs mt-1">
+              <span class="shake">🌐 Hosted on AWS 🌐</span>
+            </div>
           </div>
           <div class="text-right text-xs">
-            <a href="#" class="text-blue-600 underline">Sign Guestbook</a><br />
-            <a href="#" class="text-blue-600 underline">View Source</a><br />
-            <a href="#" class="text-blue-600 underline">Email Webmaster</a>
+            <a href="#" class="text-blue-600 underline blink">Sign Guestbook</a
+            ><br />
+            <a href="#" class="text-blue-600 underline flash">View Source</a
+            ><br />
+            <a href="#" class="text-blue-600 underline shake">Email Webmaster</a
+            ><br />
+            <a href="#" class="text-blue-600 underline rainbow-text"
+              >Download Toolbar</a
+            ><br />
+            <a href="#" class="text-blue-600 underline pulse-border"
+              >Add to Favorites</a
+            >
+          </div>
+        </div>
+        <div class="text-center text-xs mt-4 border-t-2 border-gray-400 pt-2">
+          <div class="flash">⚡ POWERED BY: HTML5, ES6, Node.js ⚡</div>
+          <div class="blink">
+            🔧 Site optimized for: 4K resolution, True Color ⚡
+          </div>
+          <div class="shake">
+            © 2024 JAMBO EXCHANGE. All rights reserved. Patent pending.
           </div>
         </div>
       </div>
