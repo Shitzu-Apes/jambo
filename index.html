@@ -42,13 +42,7 @@
       }
 
       .blink {
-        animation: blink 3s steps(2, start) infinite;
-      }
-
-      @keyframes blink {
-        to {
-          visibility: hidden;
-        }
+        /* Blinking disabled */
       }
 
       .subtle-highlight {
@@ -79,6 +73,25 @@
         font-weight: bold;
         padding: 8px;
         border: 2px solid #000;
+      }
+
+      #dexscreener-embed {
+        position: relative;
+        width: 100%;
+        padding-bottom: 125%;
+      }
+      @media (min-width: 1400px) {
+        #dexscreener-embed {
+          padding-bottom: 65%;
+        }
+      }
+      #dexscreener-embed iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: 0;
       }
     </style>
   </head>
@@ -206,8 +219,77 @@
         </marquee>
       </div>
 
+      <!-- Social Links -->
+      <div class="section-90s text-center table-border">
+        <h3 class="text-2xl font-bold mb-4 important-text">
+          🚀 JOIN THE JAMBO COMMUNITY 🚀
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+          <a
+            href="https://x.com/jambo_cs"
+            target="_blank"
+            class="bg-black text-white p-6 border-4 border-blue-500 hover:border-blue-300 transition-colors block"
+          >
+            <div class="text-4xl mb-2">🐦</div>
+            <div class="text-xl font-bold">Follow on X</div>
+            <div class="text-sm">@jambo_cs</div>
+            <div class="text-xs mt-2 blink">
+              Latest updates & announcements!
+            </div>
+          </a>
+          <a
+            href="https://t.me/jambo_NEAR"
+            target="_blank"
+            class="bg-blue-500 text-white p-6 border-4 border-cyan-500 hover:border-cyan-300 transition-colors block"
+          >
+            <div class="text-4xl mb-2">📱</div>
+            <div class="text-xl font-bold">Join Telegram</div>
+            <div class="text-sm">248 members, 114 online</div>
+            <div class="text-xs mt-2 blink">JAMBO MAIN CHAT</div>
+          </a>
+        </div>
+        <div class="text-center text-sm">
+          <span class="subtle-highlight"
+            >🔥 Connect with fellow Jambo traders and get real-time updates!
+            🔥</span
+          >
+        </div>
+      </div>
+
+      <!-- Jamborghini Game -->
+      <div class="section-90s text-center">
+        <h3 class="text-2xl font-bold mb-4 important-text">
+          🏎️ PLAY JAMBORGHINI 🏎️
+        </h3>
+        <a
+          href="https://jamborghini.meme.cooking"
+          target="_blank"
+          class="inline-block"
+        >
+          <img
+            src="./assets/jamborghini.webp"
+            alt="Jamborghini Racing Game"
+            class="mx-auto max-w-sm w-full h-auto border-4 border-green-500 hover:border-green-300 transition-colors max-h-48"
+          />
+        </a>
+        <p class="text-lg font-bold mt-2">
+          The 2nd Centralized DEX Racing Experience
+        </p>
+        <p class="text-sm">Click to play the official Jambo racing minigame!</p>
+      </div>
+
       <!-- Testimonials -->
       <div class="section-90s pulse-border">
+        <div class="text-center mb-4">
+          <img
+            src="./assets/jambolambo.webp"
+            alt="Jambo Lambo"
+            class="mx-auto max-w-xs w-full h-auto border-4 border-yellow-500"
+          />
+          <p class="text-sm mt-2 important-text">
+            Our CEO's new ride (paid for with Treasury Wallet)
+          </p>
+        </div>
         <h3 class="text-2xl font-bold text-center mb-4 flash">
           💬 WHAT OUR USERS SAY 💬
         </h3>
@@ -257,6 +339,29 @@
         </div>
       </div>
 
+      <!-- Live Chart -->
+      <div class="section-90s">
+        <h3 class="text-2xl font-bold text-center mb-4 important-text">
+          📈 LIVE JAMBO CHART 📈
+        </h3>
+        <div class="mb-4">
+          <div id="dexscreener-embed">
+            <iframe
+              src="https://dexscreener.com/near/refv1-6518?embed=1&loadChartSettings=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+            ></iframe>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="text-sm blink">
+            📊 Real-time price action from NEAR Protocol 📊
+          </p>
+          <p class="text-xs">
+            Powered by DexScreener |
+            <span class="subtle-highlight">Hit that rocket! 🚀</span>
+          </p>
+        </div>
+      </div>
+
       <!-- Tokenomics -->
       <div class="section-90s shake">
         <h3 class="text-2xl font-bold text-center mb-4 rainbow-text">
@@ -275,27 +380,24 @@
           <p class="text-base">
             Supply: <b class="shake">1,000,000,000 JAMBO</b>
           </p>
-          <div class="text-xs mt-2">
-            <span class="blink">📊 MARKET CAP: $420,069 📊</span> |
-            <span class="flash">📈 24H VOLUME: $69,420 📈</span>
+          <div class="text-xs mt-2" id="live-stats">
+            <span class="blink">📊 MARKET CAP: $305,469 📊</span> |
+            <span class="flash">📈 24H VOLUME: $128,831 📈</span> |
+            <span class="subtle-highlight">💰 PRICE: $0.0003054 💰</span>
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div
-            class="bg-blue-100 p-4 border-2 border-blue-500 text-center pulse-border"
-          >
-            <b class="text-xl rainbow-text">70%</b><br />
-            <span class="flash">Liquidity</span><br />
-            <small class="blink">(Treasury Wallet)</small>
-            <div class="text-xs mt-1 shake">🏦 BANK GRADE! 🏦</div>
+          <div class="bg-blue-100 p-4 border-2 border-blue-500 text-center">
+            <b class="text-xl important-text">80%</b><br />
+            <span class="font-bold">Fair Launch</span><br />
+            <small class="text-gray-600">(Public Trading Pool)</small>
+            <div class="text-xs mt-1 blink">🚀 FAIR LAUNCH! 🚀</div>
           </div>
-          <div class="bg-green-100 p-4 border-2 border-green-500 text-center">
-            <b class="text-xl blink">30%</b><br />
-            <b class="text-red-600 flash">AIRDROP</b><br />
-            <small class="shake"
-              >You get a JAMBO!<br />Everyone gets a JAMBO!</small
-            >
-            <div class="text-xs mt-1 rainbow-text">🎁 FREE MONEY! 🎁</div>
+          <div class="bg-yellow-100 p-4 border-2 border-yellow-500 text-center">
+            <b class="text-xl important-text">20%</b><br />
+            <span class="font-bold">Team Allocation</span><br />
+            <small class="text-gray-600">(Development & Operations)</small>
+            <div class="text-xs mt-1 subtle-highlight">👥 TEAM TOKENS! 👥</div>
           </div>
         </div>
         <div class="mt-4 text-center">
@@ -311,53 +413,124 @@
           🎁 AIRDROP CLAIM TASKS 🎁
         </h3>
         <div class="bg-yellow-100 p-4 border-2 border-yellow-500 mb-4">
-          <h4 class="font-bold text-lg mb-2">📋 TO CLAIM YOUR 30% AIRDROP:</h4>
+          <h4 class="font-bold text-lg mb-2">📋 TO CLAIM YOUR AIRDROP:</h4>
           <div class="space-y-2">
             <div class="flex items-start gap-2">
               <span class="important-text">1.</span>
               <div>
-                <p class="font-bold">Post on X (Twitter)</p>
+                <p class="font-bold">Play Jamborghini Racing Game</p>
                 <p class="text-sm">
-                  Post "JAMBO" exactly
-                  <span class="subtle-highlight">9 times</span> on X
+                  Play <span class="subtle-highlight">Jamborghini</span> and
+                  achieve your best score
                 </p>
                 <p class="text-xs text-gray-600">
-                  Each post must be separate (no copy-paste spam)
+                  Visit jamborghini.meme.cooking and race to set a record
                 </p>
               </div>
             </div>
             <div class="flex items-start gap-2">
               <span class="important-text">2.</span>
               <div>
-                <p class="font-bold">DM Proof</p>
+                <p class="font-bold">Share Your Record on X</p>
                 <p class="text-sm">
-                  Send screenshots of all 9 posts to our customer service
+                  Post your Jamborghini high score screenshot on X (Twitter)
                 </p>
                 <p class="text-xs text-gray-600">
-                  Allow 1-3 business days for manual verification
+                  Share your achievement with the community
                 </p>
               </div>
             </div>
             <div class="flex items-start gap-2">
               <span class="important-text">3.</span>
               <div>
-                <p class="font-bold">Receive Tokens</p>
+                <p class="font-bold">Fill Out Claim Form</p>
                 <p class="text-sm">
-                  We manually transfer your share from Treasury Wallet
+                  Complete the official airdrop form (coming soon)
                 </p>
                 <p class="text-xs text-gray-600">
-                  "Slippage" may apply during manual distribution
+                  Form will include score verification and wallet details
                 </p>
               </div>
             </div>
           </div>
           <div class="mt-4 text-center">
-            <button class="button-90s">START AIRDROP TASKS</button>
+            <a
+              href="https://jamborghini.meme.cooking"
+              target="_blank"
+              class="button-90s inline-block"
+              >START AIRDROP TASKS</a
+            >
           </div>
         </div>
         <div class="text-center text-xs">
           <p class="blink">⚠️ Limited time offer! First 1000 users only ⚠️</p>
           <p>This is parody content. No actual airdrop will occur.</p>
+        </div>
+      </div>
+
+      <!-- Trading Links -->
+      <div class="section-90s table-border">
+        <h3 class="text-2xl font-bold text-center mb-4 important-text">
+          🔗 OFFICIAL JAMBO LINKS 🔗
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-blue-100 p-4 border-2 border-blue-500">
+            <h4 class="font-bold text-lg mb-2">🌉 Bridge</h4>
+            <a
+              href="https://app.shitzuapes.xyz/bridge"
+              target="_blank"
+              class="text-blue-600 underline hover:text-blue-800"
+            >
+              Jambo Bridge →
+            </a>
+            <p class="text-xs mt-1">Cross-chain your assets manually</p>
+          </div>
+          <div class="bg-green-100 p-4 border-2 border-green-500">
+            <h4 class="font-bold text-lg mb-2">🍳 Meme.Cooking</h4>
+            <a
+              href="https://meme.cooking/meme/1679"
+              target="_blank"
+              class="text-blue-600 underline hover:text-blue-800"
+            >
+              Buy JAMBO →
+            </a>
+            <p class="text-xs mt-1">Original launch platform</p>
+          </div>
+          <div class="bg-purple-100 p-4 border-2 border-purple-500">
+            <h4 class="font-bold text-lg mb-2">🐋 Orca</h4>
+            <a
+              href="https://www.orca.so/?tokenIn=So11111111111111111111111111111111111111112&tokenOut=2cMYUjUQJzrTcnxrD8JgL1BQL1AQKCtRkYLdmaTpCWYB"
+              target="_blank"
+              class="text-blue-600 underline hover:text-blue-800"
+            >
+              Trade on Solana →
+            </a>
+            <p class="text-xs mt-1">Solana DEX trading</p>
+          </div>
+          <div class="bg-orange-100 p-4 border-2 border-orange-500">
+            <h4 class="font-bold text-lg mb-2">📊 DexScreener</h4>
+            <div class="space-y-1">
+              <div>
+                <a
+                  href="https://dexscreener.com/near/refv1-6518"
+                  target="_blank"
+                  class="text-blue-600 underline hover:text-blue-800"
+                >
+                  NEAR Charts 🚀 →
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://dexscreener.com/solana/cqjn7qvzfqalj3yoybwygkmqjylmkm2mgu3nqvf1j3bw"
+                  target="_blank"
+                  class="text-blue-600 underline hover:text-blue-800"
+                >
+                  Solana Charts 🚀 →
+                </a>
+              </div>
+            </div>
+            <p class="text-xs mt-1">Hit those rocket buttons!</p>
+          </div>
         </div>
       </div>
 
@@ -527,6 +700,97 @@
           clickCount++;
           alert(`You have clicked ${clickCount} times! Very Web 1.0 of you.`);
         });
+
+      // Fetch live JAMBO stats from both chains
+      async function fetchJamboStats() {
+        try {
+          // Fetch both NEAR and Solana data in parallel
+          const [nearResponse, solanaResponse] = await Promise.all([
+            fetch(
+              "https://api.dexscreener.com/latest/dex/pairs/near/refv1-6518"
+            ),
+            fetch(
+              "https://api.dexscreener.com/latest/dex/pairs/solana/cqjn7qvzfqalj3yoybwygkmqjylmkm2mgu3nqvf1j3bw"
+            ),
+          ]);
+
+          const nearData = await nearResponse.json();
+          const solanaData = await solanaResponse.json();
+
+          if (nearData.pair || solanaData.pair) {
+            const nearPair = nearData.pair || {};
+            const solanaPair = solanaData.pair || {};
+
+            // Combine stats from both chains
+            const combinedMarketCap = Math.round(
+              (nearPair.fdv || 0) + (solanaPair.fdv || 0)
+            );
+            const combinedVolume24h = Math.round(
+              (nearPair.volume?.h24 || 0) + (solanaPair.volume?.h24 || 0)
+            );
+            const combinedLiquidity = Math.round(
+              (nearPair.liquidity?.usd || 0) + (solanaPair.liquidity?.usd || 0)
+            );
+
+            // Use price from the chain with higher volume
+            const nearVolume = nearPair.volume?.h24 || 0;
+            const solanaVolume = solanaPair.volume?.h24 || 0;
+            const primaryPair =
+              nearVolume >= solanaVolume ? nearPair : solanaPair;
+            const price = parseFloat(primaryPair.priceUsd || 0);
+            const priceChange24h = primaryPair.priceChange?.h24 || 0;
+
+            // Update the live stats
+            const statsElement = document.getElementById("live-stats");
+            if (statsElement) {
+              statsElement.innerHTML = `
+                <span class="blink">📊 MARKET CAP: $${combinedMarketCap.toLocaleString()} 📊</span> |
+                <span class="flash">📈 24H VOLUME: $${combinedVolume24h.toLocaleString()} 📈</span> |
+                <span class="subtle-highlight">💰 PRICE: $${price.toFixed(
+                  6
+                )} 💰</span> |
+                <span class="important-text">🌊 LIQUIDITY: $${combinedLiquidity.toLocaleString()} 🌊</span> |
+                <span class="${
+                  priceChange24h >= 0 ? "text-green-600" : "text-red-600"
+                }">
+                  ${
+                    priceChange24h >= 0 ? "📈" : "📉"
+                  } 24H: ${priceChange24h.toFixed(1)}%
+                </span>
+              `;
+            }
+
+            console.log("JAMBO cross-chain stats updated:", {
+              near: {
+                marketCap: nearPair.fdv,
+                volume: nearPair.volume?.h24,
+                liquidity: nearPair.liquidity?.usd,
+              },
+              solana: {
+                marketCap: solanaPair.fdv,
+                volume: solanaPair.volume?.h24,
+                liquidity: solanaPair.liquidity?.usd,
+              },
+              combined: {
+                marketCap: combinedMarketCap,
+                volume: combinedVolume24h,
+                liquidity: combinedLiquidity,
+                price,
+                priceChange24h,
+              },
+            });
+          }
+        } catch (error) {
+          console.log("Failed to fetch JAMBO cross-chain stats:", error);
+          // Keep fallback data if API fails
+        }
+      }
+
+      // Fetch stats on page load
+      fetchJamboStats();
+
+      // Update stats every 30 seconds
+      setInterval(fetchJamboStats, 30000);
     </script>
   </body>
 </html>
